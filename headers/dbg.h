@@ -28,7 +28,7 @@ class dbg {
 
 		//Other methods
 
-		// 
+		// Various logging methods
 		static void log(std::string _msg);
 		static void logWrn(std::string _msg);
 		static void logErr(std::string _msg);
@@ -37,13 +37,20 @@ class dbg {
 		static void logClr(std::string _msg, int _clr);
 		static void logRnbw(std::string _msg);
 		static void pRnbw(std::string _msg);
+
+		// Shorthand commands
 		static void l(std::string _msg);
 		static void p(std::string _msg);
+
+		// Printing methods
 		static void print(std::string _msg);
+
+		// Execution time methods
 		static double getExecTime();
 		static std::string getExecTime_S();
 		static std::string getExecTime_SF();
 
+		// ColourCode enum for specific colours for debugging
 		enum colourCode{
 			BLACK = 0,
 			RED = 1,
