@@ -9,7 +9,7 @@ int main(){
     dbg::p("Program debugging state is set to " + std::to_string(dbg::getEnabled()));
     dbg::setEnabled(true);
     dbg::p("Program debugging state is set to " + std::to_string(dbg::getEnabled()));
-    dbg::log("This means that logging works, but only when logging is set to true");
+    dbg::l("This means that logging works, but only when logging is set to true");
     dbg::setEnabled(false);
     dbg::p("Program debugging state is set to " + std::to_string(dbg::getEnabled()));
     dbg::log("This shouldn't be printed");

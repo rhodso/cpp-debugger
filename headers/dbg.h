@@ -33,6 +33,7 @@ class dbg {
 		static void logIgnore(std::string _msg);
 		static void logClr(std::string _msg);
 		static void logClr(std::string _msg, int _clr);
+		static void l(std::string _msg);
 		static void p(std::string _msg);
 		static void print(std::string _msg);
 		static double getExecTime();

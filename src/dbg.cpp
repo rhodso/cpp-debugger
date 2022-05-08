@@ -52,6 +52,7 @@ void dbg::logClr(std::string _msg, int _clr){
     }
 
 }
+void dbg::l(std::string _msg){ dbg::log(_msg); } //Shorthand for standard log
 void dbg::p(std::string _msg){ dbg::print(_msg); } //Shorthand for print
 void dbg::print(std::string _msg){ std::cout << _msg << std::endl; }
 
