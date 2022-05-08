@@ -57,6 +57,7 @@ void dbg::logClr(std::string _msg, int _clr){
 }
 // Rainbow logging commands
 void dbg::logRnbw(std::string _msg){
+    _msg = getExecTime_SF() + _msg;
     int colours[] = {1, 3, 2, 4, 5};
     int i = 0;
     for(char& c : _msg) {
@@ -65,6 +66,18 @@ void dbg::logRnbw(std::string _msg){
         i++;
     }
     std::cout << std::endl;
+
+}
+void dbg::pRnbw(std::string _msg){
+        int colours[] = {1, 3, 2, 4, 5};
+    int i = 0;
+    for(char& c : _msg) {
+        i = i % 5;
+        std::cout << "\033[1;3" + std::to_string(colours[i]) + "m" << c << "\033[0m";
+        i++;
+    }
+    std::cout << std::endl;
+
 }
 // Shorthands
 void dbg::l(std::string _msg){ dbg::log(_msg); } // Shorthand for standard log

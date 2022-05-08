@@ -18,7 +18,8 @@ int main(){
     dbg::logErr("This is an error");
     dbg::logClr("This message is in green");
     dbg::logClr("This message is in magenta", dbg::MAGENTA);
-    dbg::logRnbw("This message should be in rainbow-esque colours");
+    dbg::logRnbw("This message should be logged in rainbow-esque colours");
+    dbg::pRnbw("This message should be printed in rainbow-esque colours");
     dbg::p("That should be all!");
 
     return 0;

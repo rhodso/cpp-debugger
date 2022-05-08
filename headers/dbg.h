@@ -36,6 +36,7 @@ class dbg {
 		static void logClr(std::string _msg);
 		static void logClr(std::string _msg, int _clr);
 		static void logRnbw(std::string _msg);
+		static void pRnbw(std::string _msg);
 		static void l(std::string _msg);
 		static void p(std::string _msg);
 		static void print(std::string _msg);
