@@ -57,27 +57,34 @@ void dbg::logClr(std::string _msg, int _clr){
 }
 // Rainbow logging commands
 void dbg::logRnbw(std::string _msg){
+    // Add the execution time to the start of the message
     _msg = getExecTime_SF() + "\t" + _msg;
-    int colours[] = {1, 3, 2, 4, 5};
-    int i = 0;
-    for(char& c : _msg) {
-        i = i % 5;
-        std::cout << "\033[1;3" + std::to_string(colours[i]) + "m" << c << "\033[0m";
-        i++;
-    }
-    std::cout << std::endl;
 
+    //Re-use the print command
+    pRnbw(_msg);
 }
 void dbg::pRnbw(std::string _msg){
-        int colours[] = {1, 3, 2, 4, 5};
+
+    // Colour array, represents Red, Yellow, Green, Blue, Magenta
+    int colours[] = {1, 3, 2, 4, 5};
+
+    // Colour tracking variable
     int i = 0;
+
+    // For each character in the string we want to print
     for(char& c : _msg) {
+
+        // Ensure we're not going to fuck up the array index
         i = i % 5;
+
+        // I stole this from code I wrote 8 months ago, I don't know how it works, just that it does
         std::cout << "\033[1;3" + std::to_string(colours[i]) + "m" << c << "\033[0m";
+
+        // Increment counter
         i++;
     }
+    // Print an end line character at the end
     std::cout << std::endl;
-
 }
 // Shorthands
 void dbg::l(std::string _msg){ dbg::log(_msg); } // Shorthand for standard log
