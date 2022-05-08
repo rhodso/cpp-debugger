@@ -27,12 +27,15 @@ class dbg {
 		static void setEnabled( bool _enabled );
 
 		//Other methods
+
+		// 
 		static void log(std::string _msg);
 		static void logWrn(std::string _msg);
 		static void logErr(std::string _msg);
 		static void logIgnore(std::string _msg);
 		static void logClr(std::string _msg);
 		static void logClr(std::string _msg, int _clr);
+		static void logRnbw(std::string _msg);
 		static void l(std::string _msg);
 		static void p(std::string _msg);
 		static void print(std::string _msg);
