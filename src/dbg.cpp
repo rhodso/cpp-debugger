@@ -88,9 +88,11 @@ void dbg::pRnbw(std::string _msg){
 }
 // Shorthands
 void dbg::l(std::string _msg){ dbg::log(_msg); } // Shorthand for standard log
+void dbg::p(){dbg::print("");} //Shorthand for print blank line 
 void dbg::p(std::string _msg){ dbg::print(_msg); } // Shorthand for print
 
 // Standard print command
+void dbg::print(){dbg::print("");} // Print blank line
 void dbg::print(std::string _msg){ std::cout << _msg << std::endl; }
 
 // Execution time methods

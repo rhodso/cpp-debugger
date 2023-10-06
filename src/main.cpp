@@ -5,6 +5,7 @@ int main(){
     
 	dbg::p("Program execution started");
     dbg::p("Program execution time is " + dbg::getExecTime_S());
+    dbg::p();
     dbg::logIgnore("This can also be printed this way");
     dbg::p("Program debugging state is set to " + std::to_string(dbg::getEnabled()));
     dbg::setEnabled(true);

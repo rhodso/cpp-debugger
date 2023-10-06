@@ -40,9 +40,11 @@ class dbg {
 
 		// Shorthand commands
 		static void l(std::string _msg);
+		static void p();
 		static void p(std::string _msg);
 
 		// Printing methods
+		static void print();
 		static void print(std::string _msg);
 
 		// Execution time methods
